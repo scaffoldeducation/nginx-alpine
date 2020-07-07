@@ -3,6 +3,7 @@ FROM nginx:1.15-alpine
 LABEL maintainer="Carlos Bastos <carlos.bastos@fireworkweb.com>"
 
 COPY nginx.conf /etc/nginx/
+COPY ./sites/default.conf /etc/nginx/sites-available/
 
 RUN apk update \
     && apk upgrade \
